@@ -10,7 +10,7 @@ import openai
 
 import evals
 import evals.record
-from evals import CompletionFn, DummyCompletionFn, OpenAIChatCompletionFn
+from evals.base import ModelSpec
 from evals.elsuite.modelgraded.base import ModelGradedSpec
 from evals.elsuite.modelgraded.classify_utils import (
     CHOICE_KEY,
@@ -20,7 +20,6 @@ from evals.elsuite.modelgraded.classify_utils import (
     get_choice,
 )
 from evals.elsuite.utils import PromptFn, scrub_formatting_from_prompt
-from evals.registry import Registry
 
 
 class ModelBasedClassify(evals.Eval):
@@ -29,10 +28,9 @@ class ModelBasedClassify(evals.Eval):
 
     def __init__(
         self,
-        completion_fns: list[CompletionFn],
+        model_specs: evals.ModelSpecs,
         samples_jsonl: str,
         modelgraded_spec: str,
-        registry: Registry,
         *args,
         match_fn: str = "starts_or_endswith",
         max_tokens: int = 1024,
@@ -40,18 +38,17 @@ class ModelBasedClassify(evals.Eval):
         multicomp_temperature: float = 0.4,
         samples_renamings: Optional[dict[str, str]] = None,
         eval_type: Optional[str] = None,
+        eval_model: str = "gpt-3.5-turbo",
         metaeval: bool = False,
-        eval_completion_fn: Optional[str] = None,
         modelgraded_spec_args: Optional[dict[str, dict[str, str]]] = None,
         **kwargs,
     ):
-        super().__init__(completion_fns, *args, **kwargs)
-        n_models = len(self.completion_fns)
+        super().__init__(model_specs, *args, **kwargs)
+        n_models = len(self.model_specs.completions)
         self.max_tokens = max_tokens
         self.samples_jsonl = samples_jsonl
         self.match_fn = MATCH_FNS[match_fn]
         self.metaeval = metaeval
-        self.registry = registry
         if multicomp_n == "from_models":
             assert n_models > 1, f"multicomp_n='from_models' but only 1 model is specified."
             self.multicomp_n = n_models
@@ -64,17 +61,15 @@ class ModelBasedClassify(evals.Eval):
         self.samples_renamings = samples_renamings or {}
 
         # check if multiple models are specified
-        if len(self.completion_fns) > 1:
+        if len(self.model_specs.completions) > 1:
             assert (
                 self.multicomp_n == n_models
-            ), f"multicomp_n={self.multicomp_n} must be equal to the number of models={len(self.completion_fns)} if multiple models are specified."
+            ), f"multicomp_n={self.multicomp_n} must be equal to the number of models={len(self.model_specs.completions)} if multiple models are specified."
 
-        if isinstance(self.completion_fn, DummyCompletionFn):
-            self.eval_completion_fn = self.completion_fn
-        elif eval_completion_fn:
-            self.eval_completion_fn = self.registry.make_completion_fn(eval_completion_fn)
+        if self.model_spec.name == "dummy-completion" or self.model_spec.name == "dummy-chat":
+            self.eval_modelspec = self.model_spec
         else:
-            self.eval_completion_fn = OpenAIChatCompletionFn(model="gpt-3.5-turbo")
+            self.eval_modelspec = ModelSpec(name=eval_model, model=eval_model, is_chat=True)
 
         spec_kwargs = {"multicomp_n": self.multicomp_n}
         if modelgraded_spec_args:
@@ -113,15 +108,15 @@ class ModelBasedClassify(evals.Eval):
                     if self.multicomp_n > 1 and v in self.mg.completion_sample_templates:
                         completion_i_s = []
                         for i in range(self.multicomp_n):
-                            if len(self.completion_fns) > 1:
+                            if len(self.model_specs.completions) > 1:
                                 # use a separate model for each completion
-                                completion_fn = self.completion_fns[i]
+                                model_spec = self.model_specs.completions[i]
                             else:
                                 # use the single model for all completions
-                                completion_fn = self.completion_fn
+                                model_spec = self.model_spec
                             get_input_completion = PromptFn(
                                 test_sample[k],
-                                completion_fn=completion_fn,
+                                model_spec=model_spec,
                                 max_tokens=self.max_tokens,
                                 temperature=self.multicomp_temperature,
                             )
@@ -133,7 +128,7 @@ class ModelBasedClassify(evals.Eval):
                     else:
                         get_input_completion = PromptFn(
                             test_sample[k],
-                            completion_fn=self.completion_fn,
+                            model_spec=self.model_spec,
                             max_tokens=self.max_tokens,
                         )
                         completion, _ = get_input_completion()
@@ -155,7 +150,7 @@ class ModelBasedClassify(evals.Eval):
             prompt = self.mg.format(**args, **completions, **test_sample)
             evaluate = PromptFn(
                 prompt,
-                completion_fn=self.eval_completion_fn,
+                model_spec=self.eval_modelspec,
                 max_tokens=self.max_tokens,
             )
             try:
@@ -183,7 +178,7 @@ class ModelBasedClassify(evals.Eval):
         return choice
 
     def run(self, recorder):
-        samples = self.get_samples()
+        samples = evals.get_jsonl(self.samples_jsonl)
 
         self.eval_all_samples(recorder, samples)
         record_metrics = {}

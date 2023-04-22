@@ -1,0 +1,8 @@
+poker_strategy:
+  id: poker_strategy.dev.v0
+  metrics: [accuracy]
+
+poker_strategy.dev.v0:
+  class: evals.elsuite.basic.match:Match
+  args:
+    samples_jsonl: poker_strategy/samples.jsonl

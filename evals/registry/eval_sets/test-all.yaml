@@ -3,7 +3,6 @@ test:
     - test-match
     - test-fuzzy-match
     - test-includes
-    - test-includes-ignore-case
     - coqa-match
     - coqa-fact
     - coqa-fact-expl
