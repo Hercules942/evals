@@ -1,20 +1,3 @@
-langchain/llm/gpt-3.5-turbo:
-  class: evals.completion_fns.langchain_llm:LangChainLLMCompletionFn
-  args:
-    llm: OpenAI
-    llm_kwargs:
-      model_name: gpt-3.5-turbo
-
-langchain/llm/text-davinci-003:
-  class: evals.completion_fns.langchain_llm:LangChainLLMCompletionFn
-  args:
-    llm: OpenAI
-    llm_kwargs:
-      model_name: text-davinci-003
-
-langchain/llm/flan-t5-xl:
-  class: evals.completion_fns.langchain_llm:LangChainLLMCompletionFn
-  args:
-    llm: HuggingFaceHub
-    llm_kwargs:
-      repo_id: google/flan-t5-xl
+version https://git-lfs.github.com/spec/v1
+oid sha256:caade786e82aba4e8662ba3c61ee1dc1984ec4031ca7166ee83007f917e171a1
+size 544

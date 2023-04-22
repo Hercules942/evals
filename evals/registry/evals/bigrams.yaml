@@ -1,8 +1,3 @@
-bigrams:
-  id: bigrams.dev.v0
-  metrics: [accuracy]
-
-bigrams.dev.v0:
-  class: evals.elsuite.basic.match:Match
-  args:
-    samples_jsonl: bigrams/samples.jsonl
+version https://git-lfs.github.com/spec/v1
+oid sha256:a0ef1b24dde753cbe39c28fa8ac5bca534cb38f9bbe64780fb447264bf0ecc41
+size 167

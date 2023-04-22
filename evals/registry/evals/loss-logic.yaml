@@ -1,9 +1,3 @@
-loss-logic-fact:
-  id: loss-logic-fact.dev.v0
-  metrics: [accuracy]
-loss-logic-fact.dev.v0:
-  class: evals.elsuite.modelgraded.classify:ModelBasedClassify
-  args:
-    samples_jsonl: loss_logic/samples.jsonl
-    eval_type: cot_classify
-    modelgraded_spec_file: fact
+version https://git-lfs.github.com/spec/v1
+oid sha256:b98ec3baf7dc41b78913d50a952c6d6e644e670aca82d98757f8fa24c4ba2fef
+size 276

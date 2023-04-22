@@ -1,13 +1,3 @@
-best:
-  prompt: |-
-    Which of the following {n} texts is best response to the following instruction?
-
-    Instruction: {input}
-
-    Responses:
-    {completion}
-  completion_sample_templates:
-    completion: "{i}. {output}\n"
-  choice_strings: from_n
-  input_outputs:
-    input: completion
+version https://git-lfs.github.com/spec/v1
+oid sha256:d534bb5c24a5ef3f49280cdbf33ea323d19b75a8a1bc8ccad10938c2c53e3695
+size 304

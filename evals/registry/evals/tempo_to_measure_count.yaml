@@ -1,8 +1,3 @@
-tempo_to_measure_count:
-  id: tempo_to_measure_count.dev.v0
-  description: Test the model's ability to calculate the number of measures in a song, based on the tempo of each note and the corresponding time signature of the piece. 
-  metrics: [accuracy]
-tempo_to_measure_count.dev.v0:
-  class: evals.elsuite.basic.fuzzy_match:FuzzyMatch
-  args:
-    samples_jsonl: tempo_to_measure_count/samples.jsonl
+version https://git-lfs.github.com/spec/v1
+oid sha256:2d448432cba521c2be252e54d76d3bfef0f8a237624185481824e3d81fac8ef2
+size 406

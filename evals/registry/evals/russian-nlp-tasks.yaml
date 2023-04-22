@@ -1,8 +1,3 @@
-russian-nlp-tasks:
-  id: russian-nlp-tasks.dev.v0
-  metrics: [accuracy]
-
-russian-nlp-tasks.dev.v0:
-  class: evals.elsuite.basic.match:Match
-  args:
-    samples_jsonl: russian-nlp-tasks/samples.jsonl
+version https://git-lfs.github.com/spec/v1
+oid sha256:f6989e73e4d1f22cbfb4f8d4c0ad65c0799f9b7d2eb98670ee0f1dc6fe50127a
+size 207

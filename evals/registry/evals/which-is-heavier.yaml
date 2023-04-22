@@ -1,8 +1,3 @@
-which-is-heavier:
-  id: which-is-heavier.dev.v0
-  description: Test the model's ability to determine which of two quantities is heavier when the heavier quantity is made up of lighter objects (and vice versa).
-  metrics: [accuracy]
-which-is-heavier.dev.v0:
-  class: evals.elsuite.basic.match:Match
-  args:
-    samples_jsonl: which_is_heavier/which_is_heavier.jsonl
+version https://git-lfs.github.com/spec/v1
+oid sha256:249e65b71efa664ada482ea6c0adafe6c260a0ce2b86ea939c6f2489b0f124e4
+size 373

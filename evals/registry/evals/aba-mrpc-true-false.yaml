@@ -1,8 +1,3 @@
-aba_mrpc_true_false:
-  id: aba_mrpc_true_false.dev.v0
-  metrics: [accuracy]
-
-aba_mrpc_true_false.dev.v0:
-  class: evals.elsuite.basic.match:Match
-  args:
-    samples_jsonl: aba_mrpc_true_false/samples.jsonl
+version https://git-lfs.github.com/spec/v1
+oid sha256:fd9094a87d56f494343658155f0a24109823f19a5f85d9a5b40c52742864e19c
+size 215

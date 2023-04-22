@@ -1,8 +1,3 @@
-mendelian_inheritance:
-  id: mendelian_inheritance.dev.v0
-  metrics: [accuracy]
-
-mendelian_inheritance.dev.v0:
-  class: evals.elsuite.basic.match:Match
-  args:
-    samples_jsonl: mendelian_inheritance/samples.jsonl
+version https://git-lfs.github.com/spec/v1
+oid sha256:1fce23d0340444e97fdda4e3848a36e07f244e02a376319d44892b59bd370994
+size 223

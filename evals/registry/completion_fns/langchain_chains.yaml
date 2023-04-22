@@ -1,2 +1,3 @@
-langchain/chains/llm_math:
-  class: evals.completion_fns.langchain_math:LangChainMathChainCompletionFn
+version https://git-lfs.github.com/spec/v1
+oid sha256:b491a06635aec7ac5fa5dde3bb174a831cae880e37a1cd49caebfa5087a2f1d4
+size 105

@@ -1,8 +1,3 @@
-match_banking77:
-  id: match_banking77.test.v1
-  metrics:
-  - accuracy
-match_banking77.test.v1:
-  args:
-    samples_jsonl: banking77/samples.jsonl
-  class: evals.elsuite.basic.match:Match
+version https://git-lfs.github.com/spec/v1
+oid sha256:f544d0f06d67ae6deb6f4b7fb076fb3624e796c536c0aaf84e00d471b6f09129
+size 196

@@ -1,9 +1,3 @@
-complex-replace-characters:
-  id: complex-replace-characters.dev.v0
-  description: 
-  metrics: [accuracy]
-
-complex-replace-characters.dev.v0:
-  class: evals.elsuite.basic.match:Match
-  args:
-    samples_jsonl: complex_replace_characters/samples.jsonl
+version https://git-lfs.github.com/spec/v1
+oid sha256:b9caba8de14eb543aac00b743b16d49da1d9752ddf670e225a15fea249687447
+size 258

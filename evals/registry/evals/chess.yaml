@@ -1,8 +1,3 @@
-chess-match:
-  id: chess.match.dev.v0
-  description: Test the model's ability to play chess
-  metrics: [accuracy]
-chess.match.dev.v0:
-  class: evals.elsuite.basic.fuzzy_match:FuzzyMatch
-  args:
-    samples_jsonl: chess/match.jsonl
+version https://git-lfs.github.com/spec/v1
+oid sha256:28de3ea0131c71c204ebcf6dffb212c05c2993520123497bdb39700d22121441
+size 237

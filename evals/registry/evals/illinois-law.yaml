@@ -1,8 +1,3 @@
-illinois-law:
-  id: illinois-law.v0
-  description: Test model's capability of predicting the verdict on several Illinois law cases.
-  metrics: [accuracy]
-illinois-law.v0:
-  class: evals.elsuite.basic.match:Match
-  args:
-    samples_jsonl: illinois-law/samples.jsonl
+version https://git-lfs.github.com/spec/v1
+oid sha256:908bf794756833ff8ea73d50a2e45d4cd7f96694efdeb2991577c06d8d2bec0e
+size 272

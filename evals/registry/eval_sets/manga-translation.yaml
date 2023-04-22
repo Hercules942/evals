@@ -1,6 +1,3 @@
-manga-translation:
-  evals:
-    - manga-translation-page
-    - manga-translation-panel
-    - manga-translation-bubble
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:dfff164af01c2279c338a0e6bac020992c37c96b28bffd17f0478fef61bad96b
+size 125

@@ -1,8 +1,3 @@
-unified-patch:
-  id: unified-patch.dev.v0
-  metrics: [accuracy]
-
-unified-patch.dev.v0:
-  class: evals.elsuite.basic.includes:Includes
-  args:
-    samples_jsonl: unified_patch/samples.jsonl
+version https://git-lfs.github.com/spec/v1
+oid sha256:ed9da318d80358d2fb78ed992b0f2d2bee799daf51830e6c729e1053f4c7c67e
+size 197

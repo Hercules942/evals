@@ -1,8 +1,3 @@
-actors-sequence:
-  id: actors-sequence.dev.match-v1
-  metrics: [accuracy]
-  description: Evaluate multiple actor output, sequence following, tokenization, logic ability
-actors-sequence.dev.match-v1:
-  class: evals.elsuite.basic.match:Match
-  args:
-    samples_jsonl: actors-sequence/samples.jsonl
+version https://git-lfs.github.com/spec/v1
+oid sha256:781ec395f8f970523df72d5a2df4e4352465a61d9499284ae3548ff0b0846905
+size 305

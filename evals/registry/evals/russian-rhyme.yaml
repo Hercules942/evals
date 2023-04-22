@@ -1,8 +1,3 @@
-russian-rhyme:
-  id: russian-rhyme.v0
-  description: Composite task that involves translation and rhyming.
-  metrics: [accuracy]
-russian-rhyme.v0:
-  class: evals.elsuite.basic.fuzzy_match:FuzzyMatch
-  args:
-    samples_jsonl: russian-rhyme/samples.jsonl
+version https://git-lfs.github.com/spec/v1
+oid sha256:b1ccef23cf2912dfe7ea6f88685b7f2b90e094619ddeb9d232935e80fc0d79a7
+size 262

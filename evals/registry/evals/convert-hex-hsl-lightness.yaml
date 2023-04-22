@@ -1,9 +1,3 @@
-convert-hex-hsl-lightness:
-  id: convert-hex-hsl-lightness.dev.v0
-  description: Eval that checks ability to convert a color represented as a hex code to HSL accurately.
-  metrics: [accuracy]
-
-convert-hex-hsl-lightness.dev.v0:
-  class: evals.elsuite.basic.match:Match
-  args:
-    samples_jsonl: convert-hex-hsl-lightness/samples.jsonl
+version https://git-lfs.github.com/spec/v1
+oid sha256:d951e53c05ce60d8948d1e002f75c0bdf6e8bc1cfe211775333ff450e845615e
+size 344

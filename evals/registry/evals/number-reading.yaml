@@ -1,9 +1,3 @@
-number-reading:
-  id: number-reading.dev.v0
-  description: Test the model's ability to translate chinese written number into arabic numerals.
-  metrics: [accuracy]
-
-number-reading.dev.v0:
-  class: evals.elsuite.basic.match:Match
-  args:
-    samples_jsonl: number_reading/number_reading.jsonl
+version https://git-lfs.github.com/spec/v1
+oid sha256:a87104b2cc487f2688e4c9698c2ab9fe9b2a6c32f4ddf3158f0e542ec26e3867
+size 301

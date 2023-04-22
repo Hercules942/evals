@@ -1,8 +1,3 @@
-escher-sentences:
-  id: escher-sentences.dev.v0
-  metrics: [accuracy]
-
-escher-sentences.dev.v0:
-  class: evals.elsuite.basic.match:Match
-  args:
-    samples_jsonl: escher_sentences/samples.jsonl
+version https://git-lfs.github.com/spec/v1
+oid sha256:ee3208c69b4640a239812728e7ba13e9734764738df7eeabc92eb78d845b2b05
+size 203

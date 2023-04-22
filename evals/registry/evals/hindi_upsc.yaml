@@ -1,8 +1,3 @@
-hindi_upsc:
-  id: hindi_upsc.dev.v0
-  metrics: [accuracy]
-
-hindi_upsc.dev.v0:
-  class: evals.elsuite.basic.match:Match
-  args:
-    samples_jsonl: hindi_upsc/samples.jsonl
+version https://git-lfs.github.com/spec/v1
+oid sha256:f220c7f952ee828c1b6d774436b2fc66f23865cabdc0e45d7b53267b445258a6
+size 177

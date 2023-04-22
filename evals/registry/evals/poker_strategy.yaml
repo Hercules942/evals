@@ -1,8 +1,3 @@
-poker_strategy:
-  id: poker_strategy.dev.v0
-  metrics: [accuracy]
-
-poker_strategy.dev.v0:
-  class: evals.elsuite.basic.match:Match
-  args:
-    samples_jsonl: poker_strategy/samples.jsonl
+version https://git-lfs.github.com/spec/v1
+oid sha256:a8ff8768cfe4ed5a7deb320e388530ccbedf8748b27b0288260f9223e04cc52f
+size 195

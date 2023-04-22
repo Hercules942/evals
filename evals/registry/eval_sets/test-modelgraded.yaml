@@ -1,14 +1,3 @@
-test-modelgraded:
-  evals:
-    - logic-fact
-    - joke-fruits
-    - joke-fruits-v2
-    - joke-fruits-likert
-    - joke-fruits-meta
-    - joke-fruits-expl-meta
-    - joke-fruits-ans-meta
-    - diversity
-    - joke-animals-vs-fruits
-    - rap-people-vs-people
-    - rap-animals-vs-fruits
-    - rap-people-vs-fruits
+version https://git-lfs.github.com/spec/v1
+oid sha256:524ecf43e268533761e7c60a235f1b77559de3f3c60e315f2b19f9318413cb2d
+size 325

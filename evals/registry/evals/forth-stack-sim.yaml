@@ -1,26 +1,3 @@
-forth-stack-sim:
-  id: forth-stack-sim.dev.v0
-  description: Test the model's ability to simulate a simple forth stack machine
-  metrics: [accuracy]
-forth-stack-sim.dev.v0:
-  class: evals.elsuite.basic.match:Match
-  args:
-    samples_jsonl: forth_stack_sim/samples.jsonl
-
-forth-stack-sim-basic:
-  id: forth-stack-sim-basic.dev.v0
-  description: Test the model's ability to simulate a simple forth stack machine with a basic explanation
-  metrics: [accuracy]
-forth-stack-sim-basic.dev.v0:
-  class: evals.elsuite.basic.match:Match
-  args:
-    samples_jsonl: forth_stack_sim/basic_samples.jsonl
-
-forth-stack-sim-detailed:
-  id: forth-stack-sim-detailed.dev.v0
-  description: Test the model's ability to simulate a simple forth stack machine with a detailed explanation
-  metrics: [accuracy]
-forth-stack-sim-detailed.dev.v0:
-  class: evals.elsuite.basic.match:Match
-  args:
-    samples_jsonl: forth_stack_sim/detailed_samples.jsonl
+version https://git-lfs.github.com/spec/v1
+oid sha256:d61c9373ad99c379923060c12cf2507acebac9e6ce7232e7d55f9b6ca9d3518b
+size 954

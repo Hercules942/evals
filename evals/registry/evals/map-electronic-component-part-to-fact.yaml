@@ -1,8 +1,3 @@
-map-electronic-component-part-to-fact:
-  id: map-electronic-component-part-to-fact.dev.v0
-  metrics: [accuracy]
-
-map-electronic-component-part-to-fact.dev.v0:
-  class: evals.elsuite.basic.match:Match
-  args:
-    samples_jsonl: map-electronic-component-part-to-fact/samples.jsonl
+version https://git-lfs.github.com/spec/v1
+oid sha256:a9519d4680e55e963d9be60c3c2526d9506ce948477d3e6f1e3cafb17082a995
+size 285

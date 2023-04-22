@@ -1,8 +1,3 @@
-ph-calculation:
-  id: ph-calculation.dev.v0
-  description: Test the model's ability to apply basic mathematics to chemistry problems.
-  metrics: [accuracy]
-ph-calculation.dev.v0:
-  class: evals.elsuite.basic.fuzzy_match:FuzzyMatch
-  args:
-    samples_jsonl: ph_calculation/samples.jsonl
+version https://git-lfs.github.com/spec/v1
+oid sha256:bb0fd83e5fd7e9a1b40d0b2cfb51b8751c29b6922d8265aaaf9026dc132d0c96
+size 295

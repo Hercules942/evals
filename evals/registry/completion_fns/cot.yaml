@@ -1,14 +1,3 @@
-cot/text-davinci-003:
-  class: evals.completion_fns.cot:ChainOfThoughtCompletionFn
-  args:
-    cot_completion_fn: text-davinci-003
-
-cot/gpt-3.5-turbo:
-  class: evals.completion_fns.cot:ChainOfThoughtCompletionFn
-  args:
-    cot_completion_fn: gpt-3.5-turbo
-
-cot/flan-t5-xl:
-  class: evals.completion_fns.cot:ChainOfThoughtCompletionFn
-  args:
-    cot_completion_fn: langchain/llm/flan-t5-xl
+version https://git-lfs.github.com/spec/v1
+oid sha256:071f2303ff05a67e650195838b35bf58fda93c09228e4fd14aae7739c4e46a8b
+size 405
